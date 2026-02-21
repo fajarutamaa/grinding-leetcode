@@ -19,9 +19,13 @@ grinding-leetcode/
 │   │   ├── add_two_numbers.go
 │   │   ├── add_two_numbers_test.go
 │   │   └── README.md
-│   └── sum-primes/
-│       ├── sum_prime.go
-│       ├── sum_prime_test.go
+│   ├── sum-primes/
+│   │   ├── sum_prime.go
+│   │   ├── sum_prime_test.go
+│   │   └── README.md
+│   └── same-structure/
+│       ├── same_structure.go
+│       ├── same_structure_test.go
 │       └── README.md
 ├── go.mod
 └── README.md
@@ -36,6 +40,7 @@ grinding-leetcode/
 | 1 | Two Sum | 🟢 Easy | Array, Hash Map | [→ Lihat](./algorithms/two-sum/README.md) |
 | 2 | Add Two Numbers | 🟡 Medium | Linked List | [→ Lihat](./algorithms/add-two-numbers/README.md) |
 | – | Sum Primes | 🟢 Easy | Math, Number Theory | [→ Lihat](./algorithms/sum-primes/README.md) |
+| – | Same Structure | 🟢 Easy | String, Hash Map | [→ Lihat](./algorithms/same-structure/README.md) |
 
 ---
 
@@ -89,6 +94,25 @@ Output: 17  →  2 + 3 + 5 + 7 = 17 ✅
 
 ---
 
+### 🔵 [Same Structure](./algorithms/same-structure/)
+
+> String · Easy · Hash Map
+
+Cek apakah dua string memiliki **komposisi karakter yang sama** — karakter yang sama dengan jumlah kemunculan yang sama, tanpa memperhatikan urutan.
+
+- **Pendekatan:** Frequency Counter dengan satu map — O(n) time, O(k) space
+- **Konsep kunci:** increment untuk `s1`, decrement untuk `s2`; jika ada nilai negatif → return `false`
+
+```
+Input:  s1 = "abc", s2 = "bca"
+Output: true  →  a×1, b×1, c×1 ✅
+
+Input:  s1 = "aab", s2 = "bba"
+Output: false  →  s1: a×2,b×1 ≠ s2: b×2,a×1 ❌
+```
+
+---
+
 ## ⚙️ Cara Menjalankan
 
 ### Prasyarat
@@ -124,9 +148,10 @@ go test -cover ./...
 | Topik | Problem |
 |-------|---------|
 | **Array** | [Two Sum](./algorithms/two-sum/) |
-| **Hash Map** | [Two Sum](./algorithms/two-sum/) |
+| **Hash Map** | [Two Sum](./algorithms/two-sum/), [Same Structure](./algorithms/same-structure/) |
 | **Linked List** | [Add Two Numbers](./algorithms/add-two-numbers/) |
 | **Math / Number Theory** | [Sum Primes](./algorithms/sum-primes/) |
+| **String** | [Same Structure](./algorithms/same-structure/) |
 
 ---
 
